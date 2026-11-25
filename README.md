@@ -2,7 +2,7 @@
 
 [![CI](https://github.com/AzatBagautdinov/iis-lab01-cicd/actions/workflows/ci.yml/badge.svg)](https://github.com/AzatBagautdinov/iis-lab01-cicd/actions/workflows/ci.yml)
 
-Учебный конвертер валют на JavaScript и Node.js. Курсы фиксированные и вымышленные: 1 USD = 90 RUB, 1 EUR = 100 RUB. Это демонстрация алгоритма и CI/CD, а не источник котировок.
+Конвертер на Node.js переводит суммы между рублями, долларами и евро. В программе заданы курсы 1 USD = 90 RUB и 1 EUR = 100 RUB.
 
 ## Установка и проверка
 
@@ -41,7 +41,7 @@ docker build --target production -t iis-lab1:v1 .
 docker run --rm -p 127.0.0.1:3101:3101 iis-lab1:v1
 ```
 
-Финальный образ запускается от пользователя `node` и не содержит devDependencies. Стадия `test` действительно запускает линтер, Jest и сборку.
+Финальный образ запускается от пользователя `node` и не содержит devDependencies. Стадия `test` запускает линтер, Jest и сборку.
 
 ## CI/CD и защита
 
